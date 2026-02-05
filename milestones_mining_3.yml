@@ -1,0 +1,1400 @@
+menu_title: '<shift:-48><glyph:milestones_3>'
+register_command: false
+
+open_commands:
+  - "[console] execute at %player_name% run playsound custom_sounds:sounds.ui_open ui %player_name%"
+
+size: 45
+items:
+
+  'milestones-prestiges':
+    slots: [0-2]
+    hide_attributes: true
+    material: nexo-invisible
+    display_name: "&a&lSuccès Prestiges"
+    lore:
+    - "&7Voir la catégorie de succès"
+    - "&7relatifs aux Prestiges."
+    - ""
+    click_commands:
+      - "[openguimenu] milestones_prestige_1"
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_1 ui %player_name%"
+  'milestones-Farming':
+    slots: [9-11]
+    hide_attributes: true
+    material: nexo-invisible
+    display_name: "&a&lSuccès Farming"
+    lore:
+    - "&7Voir la catégorie de succès"
+    - "&7relatifs aux Farming."
+    - ""
+    click_commands:
+      - "[openguimenu] milestones_farming_1"
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_1 ui %player_name%"    
+  'milestones-mine':
+    slots: [18-20]
+    hide_attributes: true
+    material: nexo-invisible
+    display_name: "&a&lSuccès Mine"
+    lore:
+    - "&7Voir la catégorie de succès"
+    - "&7relatifs aux Minage."
+    - ""
+    click_commands:
+      - "[openguimenu] milestones_mining_1"
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_1 ui %player_name%"
+  'milestones-extras':
+    slots: [27-29]
+    hide_attributes: true
+    material: nexo-invisible
+    display_name: "&a&lSuccès Extras"
+    lore:
+    - "&7Voir la catégorie de succès"
+    - "&7relatifs aux Extras."
+    - ""
+    click_commands:
+      - "[openguimenu] milestones_extras_1"
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_1 ui %player_name%"
+
+  'previous-page':
+    slot: 40
+    material: nexo-arrow_left
+    display_name: "&c&lPage précédente"
+    click_commands:
+      - "[openguimenu] milestones_mining_2"
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'next-page':
+    slot: 44
+    material: nexo-arrow_right
+    display_name: "&a&lPage suivante"
+  'close':
+    slot: 36
+    material: nexo-arrow_left3
+    display_name: "&4&lQuitter"
+    click_commands:
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.ui_error ui %player_name%"
+      - "[close]"
+  'info':
+    slot: 37
+    material: nexo-alert2
+    display_name: "&f&lInformations"
+    lore:
+    - "&7Complète les différents succès afin de"
+    - "&7recevoir des récompenses uniques !"
+    - ""
+    click_commands:
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+# THIS IS SECTION FOR PRESTIGE MILESTONES ITEMS!
+
+  'locked-41':
+    material: nexo-invisible
+    slot: 4
+    priority: 3
+    amount: 41
+    display_name: '&c&lSuccès &4&l41'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,200,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x150 &a&lGens Slots'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-41':
+    material: nexo-milestones_rdy
+    slot: 4
+    priority: 2
+    amount: 41
+    display_name: '&b&lSuccès &3&l41'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '4200000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining41'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,200,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x150 &a&lGens Slots'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining41'
+      - '[console] ex give gens_slot quantity:150 to:<player[%player_name%].inventory>'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-41':
+    material: nexo-milestones_unlock
+    slot: 4
+    priority: 1
+    amount: 41
+    display_name: '&a&lSuccès &2&l41'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining41' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,200,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x150 &a&lGens Slots'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-42':
+    material: nexo-invisible
+    slot: 5
+    priority: 3
+    amount: 42
+    display_name: '&c&lSuccès &4&l42'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,500,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x1 &2&lBooster &a&lMonnaie &7(&f×7 &8- &f30m&7)'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-42':
+    material: nexo-milestones_rdy
+    slot: 5
+    priority: 2
+    amount: 42
+    display_name: '&b&lSuccès &3&l42'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '4500000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining42'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,500,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x1 &2&lBooster &a&lMonnaie &7(&f×7 &8- &f30m&7)'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining42'
+      - '[console] give_potion %player_name% Money 700 30'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-42':
+    material: nexo-milestones_unlock
+    slot: 5
+    priority: 1
+    amount: 42
+    display_name: '&a&lSuccès &2&l42'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining42' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,500,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x1 &2&lBooster &a&lMonnaie &7(&f×7 &8- &f30m&7)'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-43':
+    material: nexo-invisible
+    slot: 6
+    priority: 3
+    amount: 43
+    display_name: '&c&lSuccès &4&l43'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,800,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x1 &d&lBooster &5&lLevel &7(&fx5 &8- &f30m&7)'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-43':
+    material: nexo-milestones_rdy
+    slot: 6
+    priority: 2
+    amount: 43
+    display_name: '&b&lSuccès &3&l43'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '4800000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining43'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,800,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x1 &d&lBooster &5&lLevel &7(&fx5 &8- &f30m&7)'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining43'
+      - '[console] give_potion %player_name% Level 500 30'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-43':
+    material: nexo-milestones_unlock
+    slot: 6
+    priority: 1
+    amount: 43
+    display_name: '&a&lSuccès &2&l43'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining43' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c4,800,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x1 &d&lBooster &5&lLevel &7(&fx5 &8- &f30m&7)'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-44':
+    material: nexo-invisible
+    slot: 7
+    priority: 3
+    amount: 44
+    display_name: '&c&lSuccès &4&l44'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,100,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x1 &#bb57fb&lBooster &#da91ff&lProc &7(&f×1.5 &8- &f30m&7)'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-44':
+    material: nexo-milestones_rdy
+    slot: 7
+    priority: 2
+    amount: 44
+    display_name: '&b&lSuccès &3&l44'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '5100000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining44'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,100,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3 |&7x1 &#bb57fb&lBooster &#da91ff&lProc &7(&f×1 &8- &f30m&7'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining44'
+      - '[console] give_potion %player_name% Proc 150 30'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-44':
+    material: nexo-milestones_unlock
+    slot: 7
+    priority: 1
+    amount: 44
+    display_name: '&a&lSuccès &2&l44'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining44' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,100,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x1 &#bb57fb&lBooster &#da91ff&lProc &7(&f×1 &8- &f30m&7'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-45':
+    material: nexo-invisible
+    slot: 8
+    priority: 3
+    amount: 45
+    display_name: '&c&lSuccès &4&l45'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,400,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x24 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-45':
+    material: nexo-milestones_rdy
+    slot: 8
+    priority: 2
+    amount: 45
+    display_name: '&b&lSuccès &3&l45'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '5400000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining45'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏН'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,400,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x24 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining45'
+      - '[console] acrates key give caisse-terre %player_name% 24'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-45':
+    material: nexo-milestones_unlock
+    slot: 8
+    priority: 1
+    amount: 45
+    display_name: '&a&lSuccès &2&l45'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining45' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,400,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x24 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-46':
+    material: nexo-invisible
+    slot: 13
+    priority: 3
+    amount: 46
+    display_name: '&c&lSuccès &4&l46'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,700,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x1 &#50501c&lLOOTBOX &#50501c&l★ &b&lʟᴀɴᴄᴇᴍᴇɴᴛ ᴠ1 &#50501c&l★'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-46':
+    material: nexo-milestones_rdy
+    slot: 13
+    priority: 2
+    amount: 46
+    display_name: '&b&lSuccès &3&l46'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '5700000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining46'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,700,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x1 &#50501c&lLOOTBOX &#50501c&l★ &b&lʟᴀɴᴄᴇᴍᴇɴᴛ ᴠ1 &#50501c&l★'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining46'
+      - '[console] lootbox give %player_name% startV1 1'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-46':
+    material: nexo-milestones_unlock
+    slot: 13
+    priority: 1
+    amount: 46
+    display_name: '&a&lSuccès &2&l46'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining46' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c5,700,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x1 &#50501c&lLOOTBOX &#50501c&l★ &b&lʟᴀɴᴄᴇᴍᴇɴᴛ ᴠ1 &#50501c&l★'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-47':
+    material: nexo-invisible
+    slot: 14
+    priority: 3
+    amount: 47
+    display_name: '&c&lSuccès &4&l47'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c6,000,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x150 &5&lLostCoins <glyph:lostcoins_emoji>'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-47':
+    material: nexo-milestones_rdy
+    slot: 14
+    priority: 2
+    amount: 47
+    display_name: '&b&lSuccès &3&l47'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '6000000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining47'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c6,000,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x150 &5&lLostCoins <glyph:lostcoins_emoji>'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining47'
+      - '[console] p give %player_name% 150'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-47':
+    material: nexo-milestones_unlock
+    slot: 14
+    priority: 1
+    amount: 47
+    display_name: '&a&lSuccès &2&l47'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining47' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c6,000,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x150 &5&lLostCoins <glyph:lostcoins_emoji>'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-48':
+    material: nexo-invisible
+    slot: 15
+    priority: 3
+    amount: 48
+    display_name: '&c&lSuccès &4&l48'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c6,500,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x24 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-48':
+    material: nexo-milestones_rdy
+    slot: 15
+    priority: 2
+    amount: 48
+    display_name: '&b&lSuccès &3&l48'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '6500000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining48'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c6,500,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x24 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining48'
+      - '[console] pets givepetbox %player_name% PetBoxT4 24'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-48':
+    material: nexo-milestones_unlock
+    slot: 15
+    priority: 1
+    amount: 48
+    display_name: '&a&lSuccès &2&l48'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining48' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c6,500,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x24 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-49':
+    material: nexo-invisible
+    slot: 16
+    priority: 3
+    amount: 49
+    display_name: '&c&lSuccès &4&l49'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c7,000,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x5 &c&lSuper &6&lBooster Box &7'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-49':
+    material: nexo-milestones_rdy
+    slot: 16
+    priority: 2
+    amount: 49
+    display_name: '&b&lSuccès &3&l49'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '7000000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining49'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c7,000,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x5 &c&lSuper &6&lBooster Box &7'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining49'
+      - '[console] ex give superboosterbox to:<player[%player_name%].inventory> quantity:5'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-49':
+    material: nexo-milestones_unlock
+    slot: 16
+    priority: 1
+    amount: 49
+    display_name: '&a&lSuccès &2&l49'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining49' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c7,000,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x5 &c&lSuper &6&lBooster Box &7'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-50':
+    material: nexo-invisible
+    slot: 17
+    priority: 3
+    amount: 50
+    display_name: '&c&lSuccès &4&l50'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c7,500,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x1 &b&lBooster &3&lGemmes &7(&fx6 &8- &f15m&7)'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-50':
+    material: nexo-milestones_rdy
+    slot: 17
+    priority: 2
+    amount: 50
+    display_name: '&b&lSuccès &3&l50'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '7500000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining50'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c7,500,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x1 &b&lBooster &3&lGemmes &7(&fx6 &8- &f15m&7)'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining50'
+      - '[console] give_potion %player_name% Gemmes 600 15'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-50':
+    material: nexo-milestones_unlock
+    slot: 17
+    priority: 1
+    amount: 50
+    display_name: '&a&lSuccès &2&l50'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining50' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c7,500,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x1 &b&lBooster &3&lGemmes &7(&fx6 &8- &f15m&7)'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-51':
+    material: nexo-invisible
+    slot: 22
+    priority: 3
+    amount: 51
+    display_name: '&c&lSuccès &4&l51'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c8,000,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x1 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-51':
+    material: nexo-milestones_rdy
+    slot: 22
+    priority: 2
+    amount: 51
+    display_name: '&b&lSuccès &3&l51'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '8000000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining51'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c8,000,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x1 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining51'
+      - "[console] acrates key give caisse-solaire %player_name% 1 -v"
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-51':
+    material: nexo-milestones_unlock
+    slot: 22
+    priority: 1
+    amount: 51
+    display_name: '&a&lSuccès &2&l51'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining51' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c8,000,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x1 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-52':
+    material: nexo-invisible
+    slot: 23
+    priority: 3
+    amount: 52
+    display_name: '&c&lSuccès &4&l52'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c8,500,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x25 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-52':
+    material: nexo-milestones_rdy
+    slot: 23
+    priority: 2
+    amount: 52
+    display_name: '&b&lSuccès &3&l52'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '8500000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining52'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c8,500,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x25 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining52'
+      - '[console] ex give pets_stats to:<player[%player_name%].inventory> quantity:25'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-52':
+    material: nexo-milestones_unlock
+    slot: 23
+    priority: 1
+    amount: 52
+    display_name: '&a&lSuccès &2&l52'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining52' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c8,500,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x25 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-53':
+    material: nexo-invisible
+    slot: 24
+    priority: 3
+    amount: 53
+    display_name: '&c&lSuccès &4&l53'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c9,000,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x25 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-53':
+    material: nexo-milestones_rdy
+    slot: 24
+    priority: 2
+    amount: 53
+    display_name: '&b&lSuccès &3&l53'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '9000000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining53'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c9,000,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x25 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining53'
+      - '[console] ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:25'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-53':
+    material: nexo-milestones_unlock
+    slot: 24
+    priority: 1
+    amount: 53
+    display_name: '&a&lSuccès &2&l53'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining53' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c9,000,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x25 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-54':
+    material: nexo-invisible
+    slot: 25
+    priority: 3
+    amount: 54
+    display_name: '&c&lSuccès &4&l54'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c9,500,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x25 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-54':
+    material: nexo-milestones_rdy
+    slot: 25
+    priority: 2
+    amount: 54
+    display_name: '&b&lSuccès &3&l54'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '9500000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining54'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c9,500,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x25 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining54'
+      - '[console] ex give pets_traits to:<player[%player_name%].inventory> quantity:25'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-54':
+    material: nexo-milestones_unlock
+    slot: 25
+    priority: 1
+    amount: 54
+    display_name: '&a&lSuccès &2&l54'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining54' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c9,500,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x25 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-55':
+    material: nexo-invisible
+    slot: 26
+    priority: 3
+    amount: 55
+    display_name: '&c&lSuccès &4&l55'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c10,000,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x48 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-55':
+    material: nexo-milestones_rdy
+    slot: 26
+    priority: 2
+    amount: 55
+    display_name: '&b&lSuccès &3&l55'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '10000000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining55'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c10,000,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x48 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining55'
+      - '[console] pets givepetbox %player_name% PetBoxT4 48'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-55':
+    material: nexo-milestones_unlock
+    slot: 26
+    priority: 1
+    amount: 55
+    display_name: '&a&lSuccès &2&l55'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining55' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c10,000,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x48 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-56':
+    material: nexo-invisible
+    slot: 31
+    priority: 3
+    amount: 56
+    display_name: '&c&lSuccès &4&l56'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c10,500,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x4 &b&lTotem Box <glyph:rare_rank>'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-56':
+    material: nexo-milestones_rdy
+    slot: 31
+    priority: 2
+    amount: 56
+    display_name: '&b&lSuccès &3&l56'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '10500000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining56'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c10,500,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x4 &b&lTotem Box <glyph:rare_rank>'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining56'
+      - '[console] totem box %player_name% tier4 4'
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-56':
+    material: nexo-milestones_unlock
+    slot: 31
+    priority: 1
+    amount: 56
+    display_name: '&a&lSuccès &2&l56'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining56' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c10,500,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x4 &b&lTotem Box <glyph:rare_rank>'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+
+  'locked-57':
+    material: nexo-invisible
+    slot: 32
+    priority: 3
+    amount: 57
+    display_name: '&c&lSuccès &4&l57'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&c| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&4| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c11,000,000'
+      - ''
+      - '&c| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&4| &7x250 &5&lLostCoins <glyph:lostcoins_emoji>'
+      - '&4| &7x1 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
+      - ''
+      - '&c&lᴠᴇʀʀᴏᴜɪʟʟᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous ne remplissez pas les conditions pour récupérer cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
+  'readytoclaim-57':
+    material: nexo-milestones_rdy
+    slot: 32
+    priority: 2
+    amount: 57
+    display_name: '&b&lSuccès &3&l57'
+    view_requirement:
+      requirements:
+        unlocked:
+          type: '>='
+          input: '%losteraomnitool_farmedblockraw_pickaxe%'
+          output: '11000000'
+        notclaimed:
+          type: '!'
+          permission: 'succes.mining57'
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&b| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&3| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c11,000,000'
+      - ''
+      - '&b| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&3| &7x250 &5&lLostCoins <glyph:lostcoins_emoji>'
+      - '&3| &7x1 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
+      - ''
+      - '&b&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴅɪsᴘᴏɴɪʙʟᴇ'
+    click_commands:
+      - '[console] lp user %player_name% permission set succes.mining57'
+      - '[console] p give %player_name% 250'
+      - "[console] acrates key give caisse-terre %player_name% 1 -v"
+      - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
+      - '[refresh]'
+  'claimed-57':
+    material: nexo-milestones_unlock
+    slot: 32
+    priority: 1
+    amount: 57
+    display_name: '&a&lSuccès &2&l57'
+    view_requirement:
+      requirements:
+        claimed:
+          type: has permission
+          permission: 'succes.mining57' 
+    lore:
+      - '&7Complète des succès et reçois des récompenses'
+      - '&7pour t''aider dans ta progression.' 
+      - ''
+      - '&a| &lɪɴғᴏʀᴍᴀᴛɪᴏɴ'
+      - '&2| &7ʀᴇǫᴜɪs: &a%losteraomnitool_farmedblockraw_pickaxe% &8/ &c11,000,000'
+      - ''
+      - '&a| &lʀᴇᴄᴏᴍᴘᴇɴsᴇ'
+      - '&2| &7x250 &5&lLostCoins <glyph:lostcoins_emoji>'
+      - '&2| &7x1 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
+      - ''
+      - '&a&lʀᴇᴄᴏᴍᴘᴇɴsᴇ ᴏʙᴛᴇɴᴜᴇ'
+    click_commands:
+      - "[message] &c&lErreur &8» &7Vous avez déjà obtenu cette récompense."
+      - "[console] execute at %player_name% run playsound custom_sounds:sounds.button_click_2 ui %player_name%"
