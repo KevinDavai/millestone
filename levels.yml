@@ -4,860 +4,1000 @@
 level.1:
   required-xp: 99999100
   free-reward:
-    type: tokens
-    value: 50
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT2 3"
+    reward-value: "x3 Conteneur de Robot Rare"
   premium-reward:
-    type: tokens
-    value: 250
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT2 8"
+    reward-value: "x8 Conteneur de Robot Rare"
 level.2:
   required-xp: 99999200
   free-reward:
-    type: tokens
-    value: 150
+    type: command
+    value: "give_potion %player_name% Gemmes 300 15"
+    reward-value: "x1 Booster Gemmes (x3 - 15m)"
   premium-reward:
-    type: tokens
-    value: 750
+    type: command
+    value: "give_potion %player_name% Gemmes 500 30"
+    reward-value: "x1 Booster Gemmes (x5 - 30m)"
 level.3:
   required-xp: 99999300
   free-reward:
-    type: money
-    value: 2000
+    type: command
+    value: "give_potion %player_name% Level 300 15"
+    reward-value: "x1 Booster Level (x3 - 15m)"
   premium-reward:
-    type: money
-    value: 10000
+    type: command
+    value: "give_potion %player_name% Level 500 30"
+    reward-value: "x1 Booster Level (x5 - 30m)"
 level.4:
   required-xp: 99999400
   free-reward:
-    type: tokens
-    value: 200
+    type: command
+    value: "p give %player_name% 100"
+    reward-value: "x100 LostCoins"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% fortune 1"
-    reward-value: "1x Pickaxe Fortune Level"
+    value: "p give %player_name% 500"
+    reward-value: "x500 LostCoins"
 level.5:
   required-xp: 99999500
   free-reward:
     type: command
-    value: "crate give %player% common 1"
-    reward-value: "1x Common Crate Key"
+    value: "ex give gens_slot quantity:30 to:<player[%player_name%].inventory>"
+    reward-value: "x30 Gens Slots"
   premium-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "ex give gens_slot quantity:100 to:<player[%player_name%].inventory>"
+    reward-value: "x100 Gens Slots"
 level.6:
   required-xp: 99999600
   free-reward:
-    type: tokens
-    value: 300
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Ticket de Trait"
   premium-reward:
-    type: tokens
-    value: 1500
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Ticket de Trait"
 level.7:
   required-xp: 99999700
   free-reward:
-    type: tokens
-    value: 400
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Ticket de Stat"
   premium-reward:
-    type: tokens
-    value: 2000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Ticket de Stat"
 level.8:
   required-xp: 99999800
   free-reward:
-    type: money
-    value: 4500
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT2 5"
+    reward-value: "x5 Conteneur de Robot Rare"
   premium-reward:
-    type: money
-    value: 22500
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT3 5"
+    reward-value: "x5 Conteneur de Robot Légendaire"
 level.9:
   required-xp: 99999900
   free-reward:
-    type: tokens
-    value: 450
+    type: command
+    value: "ex give boosterbox to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Booster Box"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% fortune 1"
-    reward-value: "1x Pickaxe Fortune Level"
+    value: "ex give boosterbox to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Booster Box"
 level.10:
   required-xp: 100000000
   free-reward:
     type: command
-    value: "crate give %player% common 1"
-    reward-value: "1x Common Crate Key"
+    value: "acrates key give caisse-terre %player_name% 5"
+    reward-value: "x5 Clé de Caisse Terre"
   premium-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "acrates key give caisse-terre %player_name% 12"
+    reward-value: "x12 Clé de Caisse Terre"
 level.11:
   required-xp: 100000100
   free-reward:
-    type: tokens
-    value: 550
+    type: command
+    value: "totem box %player_name% tier2 2"
+    reward-value: "x2 Totem Box Rare"
   premium-reward:
-    type: tokens
-    value: 2750
+    type: command
+    value: "totem box %player_name% tier3 3"
+    reward-value: "x3 Totem Box Épique"
 level.12:
   required-xp: 100000200
   free-reward:
-    type: tokens
-    value: 650
+    type: command
+    value: "give_potion %player_name% Gemmes 300 15"
+    reward-value: "x1 Booster Gemmes (x3 - 15m)"
   premium-reward:
-    type: tokens
-    value: 3250
+    type: command
+    value: "give_potion %player_name% Gemmes 600 15"
+    reward-value: "x1 Booster Gemmes (x6 - 15m)"
 level.13:
   required-xp: 100000300
   free-reward:
-    type: money
-    value: 7000
+    type: command
+    value: "p give %player_name% 150"
+    reward-value: "x150 LostCoins"
   premium-reward:
-    type: money
-    value: 35000
+    type: command
+    value: "p give %player_name% 750"
+    reward-value: "x750 LostCoins"
 level.14:
   required-xp: 100000400
   free-reward:
-    type: tokens
-    value: 700
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Ticket Stat Unique"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% fortune 1"
-    reward-value: "1x Pickaxe Fortune Level"
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Ticket Stat Unique"
 level.15:
   required-xp: 100000500
   free-reward:
     type: command
-    value: "crate give %player% common 1"
-    reward-value: "1x Common Crate Key"
+    value: "pets givepetbox %player_name% PetBoxT2 8"
+    reward-value: "x8 Conteneur de Robot Rare"
   premium-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "pets givepetbox %player_name% PetBoxT3 8"
+    reward-value: "x8 Conteneur de Robot Légendaire"
 level.16:
   required-xp: 100000600
   free-reward:
-    type: tokens
-    value: 800
+    type: command
+    value: "ex give gens_slot quantity:50 to:<player[%player_name%].inventory>"
+    reward-value: "x50 Gens Slots"
   premium-reward:
-    type: tokens
-    value: 4000
+    type: command
+    value: "ex give gens_slot quantity:150 to:<player[%player_name%].inventory>"
+    reward-value: "x150 Gens Slots"
 level.17:
   required-xp: 100000700
   free-reward:
-    type: tokens
-    value: 900
+    type: command
+    value: "give_potion %player_name% Level 300 15"
+    reward-value: "x1 Booster Level (x3 - 15m)"
   premium-reward:
-    type: tokens
-    value: 4500
+    type: command
+    value: "give_potion %player_name% Level 500 30"
+    reward-value: "x1 Booster Level (x5 - 30m)"
 level.18:
   required-xp: 100000800
   free-reward:
-    type: money
-    value: 9500
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Ticket de Trait"
   premium-reward:
-    type: money
-    value: 47500
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket de Trait"
 level.19:
   required-xp: 100000900
   free-reward:
-    type: tokens
-    value: 950
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Ticket de Stat"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% fortune 1"
-    reward-value: "1x Pickaxe Fortune Level"
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket de Stat"
 level.20:
   required-xp: 100001000
   free-reward:
     type: command
-    value: "crate give %player% common 1"
-    reward-value: "1x Common Crate Key"
+    value: "acrates key give caisse-terre %player_name% 8"
+    reward-value: "x8 Clé de Caisse Terre"
   premium-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "acrates key give caisse-solaire %player_name% 1"
+    reward-value: "x1 Clé de Caisse Solaire"
 level.21:
   required-xp: 100001100
   free-reward:
-    type: tokens
-    value: 1575
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT3 5"
+    reward-value: "x5 Conteneur de Robot Légendaire"
   premium-reward:
-    type: tokens
-    value: 7875
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT3 12"
+    reward-value: "x12 Conteneur de Robot Légendaire"
 level.22:
   required-xp: 100001200
   free-reward:
-    type: tokens
-    value: 1700
+    type: command
+    value: "give_potion %player_name% Money 500 30"
+    reward-value: "x1 Booster Monnaie (x5 - 30m)"
   premium-reward:
-    type: tokens
-    value: 8500
+    type: command
+    value: "give_potion %player_name% Money 700 30"
+    reward-value: "x1 Booster Monnaie (x7 - 30m)"
 level.23:
   required-xp: 100001300
   free-reward:
-    type: money
-    value: 18000
+    type: command
+    value: "p give %player_name% 200"
+    reward-value: "x200 LostCoins"
   premium-reward:
-    type: money
-    value: 90000
+    type: command
+    value: "p give %player_name% 1000"
+    reward-value: "x1000 LostCoins"
 level.24:
   required-xp: 100001400
   free-reward:
-    type: tokens
-    value: 1800
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Ticket Stat Unique"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% fortune 1"
-    reward-value: "1x Pickaxe Fortune Level"
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket Stat Unique"
 level.25:
   required-xp: 100001500
   free-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "ex give boosterbox to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Booster Box"
   premium-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:2"
+    reward-value: "x2 Super Booster Box"
 level.26:
   required-xp: 100001600
   free-reward:
-    type: tokens
-    value: 1950
+    type: command
+    value: "acrates key give caisse-terre %player_name% 12"
+    reward-value: "x12 Clé de Caisse Terre"
   premium-reward:
-    type: tokens
-    value: 9750
+    type: command
+    value: "acrates key give caisse-terre %player_name% 24"
+    reward-value: "x24 Clé de Caisse Terre"
 level.27:
   required-xp: 100001700
   free-reward:
-    type: tokens
-    value: 2075
+    type: command
+    value: "give_potion %player_name% Gemmes 500 30"
+    reward-value: "x1 Booster Gemmes (x5 - 30m)"
   premium-reward:
-    type: tokens
-    value: 10375
+    type: command
+    value: "give_potion %player_name% Gemmes 600 15"
+    reward-value: "x1 Booster Gemmes (x6 - 15m)"
 level.28:
   required-xp: 100001800
   free-reward:
-    type: money
-    value: 21750
+    type: command
+    value: "ex give gens_slot quantity:100 to:<player[%player_name%].inventory>"
+    reward-value: "x100 Gens Slots"
   premium-reward:
-    type: money
-    value: 108750
+    type: command
+    value: "ex give gens_slot quantity:200 to:<player[%player_name%].inventory>"
+    reward-value: "x200 Gens Slots"
 level.29:
   required-xp: 100001900
   free-reward:
-    type: tokens
-    value: 2175
+    type: command
+    value: "totem box %player_name% tier3 3"
+    reward-value: "x3 Totem Box Épique"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% fortune 1"
-    reward-value: "1x Pickaxe Fortune Level"
+    value: "totem box %player_name% tier4 2"
+    reward-value: "x2 Totem Box Légendaire"
 level.30:
   required-xp: 100002000
   free-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "pets givepetbox %player_name% PetBoxT3 8"
+    reward-value: "x8 Conteneur de Robot Légendaire"
   premium-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "pets givepetbox %player_name% PetBoxT3 15"
+    reward-value: "x15 Conteneur de Robot Légendaire"
 level.31:
   required-xp: 100002100
   free-reward:
-    type: tokens
-    value: 2325
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT3 10"
+    reward-value: "x10 Conteneur de Robot Légendaire"
   premium-reward:
-    type: tokens
-    value: 11625
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 8"
+    reward-value: "x8 Conteneur de Robot Tier 4"
 level.32:
   required-xp: 100002200
   free-reward:
-    type: tokens
-    value: 2450
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Ticket de Trait"
   premium-reward:
-    type: tokens
-    value: 12250
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket de Trait"
 level.33:
   required-xp: 100002300
   free-reward:
-    type: money
-    value: 25500
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Ticket de Stat"
   premium-reward:
-    type: money
-    value: 127500
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket de Stat"
 level.34:
   required-xp: 100002400
   free-reward:
-    type: money
-    value: 26250
+    type: command
+    value: "give_potion %player_name% Level 500 30"
+    reward-value: "x1 Booster Level (x5 - 30m)"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% efficiency 1"
-    reward-value: "1x Pickaxe Efficiency Level"
+    value: "give_potion %player_name% Proc 100 30"
+    reward-value: "x1 Booster Proc (x1.5 - 30m)"
 level.35:
   required-xp: 100002500
   free-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "p give %player_name% 300"
+    reward-value: "x300 LostCoins"
   premium-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "p give %player_name% 1500"
+    reward-value: "x1500 LostCoins"
 level.36:
   required-xp: 100002600
   free-reward:
-    type: tokens
-    value: 2700
+    type: command
+    value: "acrates key give caisse-terre %player_name% 15"
+    reward-value: "x15 Clé de Caisse Terre"
   premium-reward:
-    type: tokens
-    value: 13500
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 2"
+    reward-value: "x2 Clé de Caisse Solaire"
 level.37:
   required-xp: 100002700
   free-reward:
-    type: tokens
-    value: 2825
+    type: command
+    value: "ex give gens_slot quantity:150 to:<player[%player_name%].inventory>"
+    reward-value: "x150 Gens Slots"
   premium-reward:
-    type: tokens
-    value: 14125
+    type: command
+    value: "ex give gens_slot quantity:300 to:<player[%player_name%].inventory>"
+    reward-value: "x300 Gens Slots"
 level.38:
   required-xp: 100002800
   free-reward:
-    type: money
-    value: 29250
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Ticket Stat Unique"
   premium-reward:
-    type: money
-    value: 146250
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket Stat Unique"
 level.39:
   required-xp: 100002900
   free-reward:
-    type: money
-    value: 30000
+    type: command
+    value: "ex give boosterbox to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Booster Box"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% efficiency 1"
-    reward-value: "1x Pickaxe Efficiency Level"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Super Booster Box"
 level.40:
   required-xp: 100003000
   free-reward:
     type: command
-    value: "crate give %player% uncommon 1"
-    reward-value: "1x Uncommon Crate Key"
+    value: "give_potion %player_name% Money 500 30"
+    reward-value: "x1 Booster Monnaie (x5 - 30m)"
   premium-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "give_potion %player_name% Money 700 30"
+    reward-value: "x1 Booster Monnaie (x7 - 30m)"
 level.41:
   required-xp: 100003100
   free-reward:
-    type: tokens
-    value: 4100
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 10"
+    reward-value: "x10 Conteneur de Robot Tier 4"
   premium-reward:
-    type: tokens
-    value: 20500
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 20"
+    reward-value: "x20 Conteneur de Robot Tier 4"
 level.42:
   required-xp: 100003200
   free-reward:
-    type: tokens
-    value: 4250
+    type: command
+    value: "give_potion %player_name% Proc 100 30"
+    reward-value: "x1 Booster Proc (x1.5 - 30m)"
   premium-reward:
-    type: tokens
-    value: 21250
+    type: command
+    value: "give_potion %player_name% Proc 150 30"
+    reward-value: "x1 Booster Proc (x2 - 30m)"
 level.43:
   required-xp: 100003300
   free-reward:
-    type: money
-    value: 44000
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket de Trait"
   premium-reward:
-    type: money
-    value: 220000
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket de Trait"
 level.44:
   required-xp: 100003400
   free-reward:
-    type: money
-    value: 45000
+    type: command
+    value: "p give %player_name% 500"
+    reward-value: "x500 LostCoins"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% efficiency 1"
-    reward-value: "1x Pickaxe Efficiency Level"
+    value: "p give %player_name% 2500"
+    reward-value: "x2500 LostCoins"
 level.45:
   required-xp: 100003500
   free-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "acrates key give caisse-solaire %player_name% 3"
+    reward-value: "x3 Clé de Caisse Solaire"
   premium-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "acrates key give caisse-solaire %player_name% 5"
+    reward-value: "x5 Clé de Caisse Solaire"
 level.46:
   required-xp: 100003600
   free-reward:
-    type: tokens
-    value: 4600
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier3 10"
+    reward-value: "x10 Crystal Box Tier 3"
   premium-reward:
-    type: tokens
-    value: 23000
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 10"
+    reward-value: "x10 Crystal Box Tier 4"
 level.47:
   required-xp: 100003700
   free-reward:
-    type: tokens
-    value: 4750
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket Stat Unique"
   premium-reward:
-    type: tokens
-    value: 23750
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket Stat Unique"
 level.48:
   required-xp: 100003800
   free-reward:
-    type: money
-    value: 49000
+    type: command
+    value: "give_potion %player_name% Money 700 30"
+    reward-value: "x1 Booster Monnaie (x7 - 30m)"
   premium-reward:
-    type: money
-    value: 245000
+    type: command
+    value: "lootbox give %player_name% startV1 1"
+    reward-value: "x1 Lootbox Lancement V1"
 level.49:
   required-xp: 100003900
   free-reward:
-    type: money
-    value: 50000
+    type: command
+    value: "ex give gens_slot quantity:200 to:<player[%player_name%].inventory>"
+    reward-value: "x200 Gens Slots"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% efficiency 1"
-    reward-value: "1x Pickaxe Efficiency Level"
+    value: "ex give gens_slot quantity:400 to:<player[%player_name%].inventory>"
+    reward-value: "x400 Gens Slots"
 level.50:
   required-xp: 100004000
   free-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "totem box %player_name% tier4 3"
+    reward-value: "x3 Totem Box Légendaire"
   premium-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "totem box %player_name% tier4 5"
+    reward-value: "x5 Totem Box Légendaire"
 level.51:
   required-xp: 100004100
   free-reward:
-    type: tokens
-    value: 5100
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 10"
+    reward-value: "x10 Conteneur de Robot Tier 4"
   premium-reward:
-    type: tokens
-    value: 25500
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 20"
+    reward-value: "x20 Conteneur de Robot Tier 4"
 level.52:
   required-xp: 100004200
   free-reward:
-    type: tokens
-    value: 5250
+    type: command
+    value: "give_potion %player_name% Proc 100 30"
+    reward-value: "x1 Booster Proc (x1.5 - 30m)"
   premium-reward:
-    type: tokens
-    value: 26250
+    type: command
+    value: "give_potion %player_name% Proc 150 30"
+    reward-value: "x1 Booster Proc (x2 - 30m)"
 level.53:
   required-xp: 100004300
   free-reward:
-    type: money
-    value: 54000
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket de Trait"
   premium-reward:
-    type: money
-    value: 270000
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket de Trait"
 level.54:
   required-xp: 100004400
   free-reward:
-    type: money
-    value: 55000
+    type: command
+    value: "p give %player_name% 500"
+    reward-value: "x500 LostCoins"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% efficiency 1"
-    reward-value: "1x Pickaxe Efficiency Level"
+    value: "p give %player_name% 2500"
+    reward-value: "x2500 LostCoins"
 level.55:
   required-xp: 100004500
   free-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "acrates key give caisse-solaire %player_name% 3"
+    reward-value: "x3 Clé de Caisse Solaire"
   premium-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "acrates key give caisse-solaire %player_name% 5"
+    reward-value: "x5 Clé de Caisse Solaire"
 level.56:
   required-xp: 100004600
   free-reward:
-    type: tokens
-    value: 5600
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier3 10"
+    reward-value: "x10 Crystal Box Tier 3"
   premium-reward:
-    type: tokens
-    value: 28000
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 10"
+    reward-value: "x10 Crystal Box Tier 4"
 level.57:
   required-xp: 100004700
   free-reward:
-    type: tokens
-    value: 5750
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:12"
+    reward-value: "x12 Ticket Stat Unique"
   premium-reward:
-    type: tokens
-    value: 28750
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket Stat Unique"
 level.58:
   required-xp: 100004800
   free-reward:
-    type: money
-    value: 59000
+    type: command
+    value: "give_potion %player_name% Money 700 30"
+    reward-value: "x1 Booster Monnaie (x7 - 30m)"
   premium-reward:
-    type: money
-    value: 295000
+    type: command
+    value: "lootbox give %player_name% startV1 1"
+    reward-value: "x1 Lootbox Lancement V1"
 level.59:
   required-xp: 100004900
   free-reward:
-    type: money
-    value: 60000
+    type: command
+    value: "ex give gens_slot quantity:200 to:<player[%player_name%].inventory>"
+    reward-value: "x200 Gens Slots"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% efficiency 1"
-    reward-value: "1x Pickaxe Efficiency Level"
+    value: "ex give gens_slot quantity:400 to:<player[%player_name%].inventory>"
+    reward-value: "x400 Gens Slots"
 level.60:
   required-xp: 100005000
   free-reward:
     type: command
-    value: "crate give %player% rare 1"
-    reward-value: "1x Rare Crate Key"
+    value: "totem box %player_name% tier4 3"
+    reward-value: "x3 Totem Box Légendaire"
   premium-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "totem box %player_name% tier4 5"
+    reward-value: "x5 Totem Box Légendaire"
 level.61:
   required-xp: 100005100
   free-reward:
-    type: tokens
-    value: 9150
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 15"
+    reward-value: "x15 Conteneur de Robot Tier 4"
   premium-reward:
-    type: tokens
-    value: 45750
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 30"
+    reward-value: "x30 Conteneur de Robot Tier 4"
 level.62:
   required-xp: 100005200
   free-reward:
-    type: tokens
-    value: 9350
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket de Trait"
   premium-reward:
-    type: tokens
-    value: 46750
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:25"
+    reward-value: "x25 Ticket de Trait"
 level.63:
   required-xp: 100005300
   free-reward:
-    type: money
-    value: 96000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket de Stat"
   premium-reward:
-    type: money
-    value: 480000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:25"
+    reward-value: "x25 Ticket de Stat"
 level.64:
   required-xp: 100005400
   free-reward:
-    type: tokens
-    value: 9600
+    type: command
+    value: "give_potion %player_name% Proc 150 30"
+    reward-value: "x1 Booster Proc (x2 - 30m)"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "give_potion %player_name% Proc 200 30"
+    reward-value: "x1 Booster Proc (x2.5 - 30m)"
 level.65:
   required-xp: 100005500
   free-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "p give %player_name% 750"
+    reward-value: "x750 LostCoins"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "p give %player_name% 3500"
+    reward-value: "x3500 LostCoins"
 level.66:
   required-xp: 100005600
   free-reward:
-    type: tokens
-    value: 9900
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 5"
+    reward-value: "x5 Clé de Caisse Solaire"
   premium-reward:
-    type: tokens
-    value: 49500
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 8"
+    reward-value: "x8 Clé de Caisse Solaire"
 level.67:
   required-xp: 100005700
   free-reward:
-    type: tokens
-    value: 10100
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 15"
+    reward-value: "x15 Crystal Box Tier 4"
   premium-reward:
-    type: tokens
-    value: 50500
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 25"
+    reward-value: "x25 Crystal Box Tier 4"
 level.68:
   required-xp: 100005800
   free-reward:
-    type: money
-    value: 103500
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket Stat Unique"
   premium-reward:
-    type: money
-    value: 517500
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:25"
+    reward-value: "x25 Ticket Stat Unique"
 level.69:
   required-xp: 100005900
   free-reward:
-    type: tokens
-    value: 10350
+    type: command
+    value: "lootbox give %player_name% startV1 1"
+    reward-value: "x1 Lootbox Lancement V1"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "lootbox give %player_name% startV1 2"
+    reward-value: "x2 Lootbox Lancement V1"
 level.70:
   required-xp: 100006000
   free-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Super Booster Box"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Super Booster Box"
 level.71:
   required-xp: 100006100
   free-reward:
-    type: tokens
-    value: 10650
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 15"
+    reward-value: "x15 Conteneur de Robot Tier 4"
   premium-reward:
-    type: tokens
-    value: 53250
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 30"
+    reward-value: "x30 Conteneur de Robot Tier 4"
 level.72:
   required-xp: 100006200
   free-reward:
-    type: tokens
-    value: 10850
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket de Trait"
   premium-reward:
-    type: tokens
-    value: 54250
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:25"
+    reward-value: "x25 Ticket de Trait"
 level.73:
   required-xp: 100006300
   free-reward:
-    type: money
-    value: 111000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket de Stat"
   premium-reward:
-    type: money
-    value: 555000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:25"
+    reward-value: "x25 Ticket de Stat"
 level.74:
   required-xp: 100006400
   free-reward:
-    type: tokens
-    value: 11100
+    type: command
+    value: "give_potion %player_name% Proc 150 30"
+    reward-value: "x1 Booster Proc (x2 - 30m)"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "give_potion %player_name% Proc 200 30"
+    reward-value: "x1 Booster Proc (x2.5 - 30m)"
 level.75:
   required-xp: 100006500
   free-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "p give %player_name% 750"
+    reward-value: "x750 LostCoins"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "p give %player_name% 3500"
+    reward-value: "x3500 LostCoins"
 level.76:
   required-xp: 100006600
   free-reward:
-    type: tokens
-    value: 11400
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 5"
+    reward-value: "x5 Clé de Caisse Solaire"
   premium-reward:
-    type: tokens
-    value: 57000
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 8"
+    reward-value: "x8 Clé de Caisse Solaire"
 level.77:
   required-xp: 100006700
   free-reward:
-    type: tokens
-    value: 11600
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 15"
+    reward-value: "x15 Crystal Box Tier 4"
   premium-reward:
-    type: tokens
-    value: 58000
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 25"
+    reward-value: "x25 Crystal Box Tier 4"
 level.78:
   required-xp: 100006800
   free-reward:
-    type: money
-    value: 118500
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:15"
+    reward-value: "x15 Ticket Stat Unique"
   premium-reward:
-    type: money
-    value: 592500
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:25"
+    reward-value: "x25 Ticket Stat Unique"
 level.79:
   required-xp: 100006900
   free-reward:
-    type: tokens
-    value: 11850
+    type: command
+    value: "lootbox give %player_name% startV1 1"
+    reward-value: "x1 Lootbox Lancement V1"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "lootbox give %player_name% startV1 2"
+    reward-value: "x2 Lootbox Lancement V1"
 level.80:
   required-xp: 100007000
   free-reward:
     type: command
-    value: "crate give %player% epic 1"
-    reward-value: "1x Epic Crate Key"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:3"
+    reward-value: "x3 Super Booster Box"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Super Booster Box"
 level.81:
   required-xp: 100007100
   free-reward:
-    type: tokens
-    value: 20250
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 20"
+    reward-value: "x20 Conteneur de Robot Tier 4"
   premium-reward:
-    type: tokens
-    value: 101250
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 48"
+    reward-value: "x48 Conteneur de Robot Tier 4"
 level.82:
   required-xp: 100007200
   free-reward:
-    type: tokens
-    value: 20550
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket de Trait"
   premium-reward:
-    type: tokens
-    value: 102750
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:35"
+    reward-value: "x35 Ticket de Trait"
 level.83:
   required-xp: 100007300
   free-reward:
-    type: money
-    value: 210000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket de Stat"
   premium-reward:
-    type: money
-    value: 1050000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:35"
+    reward-value: "x35 Ticket de Stat"
 level.84:
   required-xp: 100007400
   free-reward:
-    type: tokens
-    value: 21000
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket Stat Unique"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:35"
+    reward-value: "x35 Ticket Stat Unique"
 level.85:
   required-xp: 100007500
   free-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "p give %player_name% 1000"
+    reward-value: "x1000 LostCoins"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 2"
-    reward-value: "2x Legendary Crate Key"
+    value: "p give %player_name% 5000"
+    reward-value: "x5000 LostCoins"
 level.86:
   required-xp: 100007600
   free-reward:
-    type: tokens
-    value: 21500
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 8"
+    reward-value: "x8 Clé de Caisse Solaire"
   premium-reward:
-    type: tokens
-    value: 107500
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 15"
+    reward-value: "x15 Clé de Caisse Solaire"
 level.87:
   required-xp: 100007700
   free-reward:
-    type: tokens
-    value: 21800
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 20"
+    reward-value: "x20 Crystal Box Tier 4"
   premium-reward:
-    type: tokens
-    value: 109000
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 35"
+    reward-value: "x35 Crystal Box Tier 4"
 level.88:
   required-xp: 100007800
   free-reward:
-    type: money
-    value: 222500
+    type: command
+    value: "lootbox give %player_name% startV1 2"
+    reward-value: "x2 Lootbox Lancement V1"
   premium-reward:
-    type: money
-    value: 1112500
+    type: command
+    value: "lootbox give %player_name% startV1 3"
+    reward-value: "x3 Lootbox Lancement V1"
 level.89:
   required-xp: 100007900
   free-reward:
-    type: tokens
-    value: 22250
+    type: command
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Super Booster Box"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Super Booster Box"
 level.90:
   required-xp: 100008000
   free-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "totem box %player_name% tier4 5"
+    reward-value: "x5 Totem Box Légendaire"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 2"
-    reward-value: "2x Legendary Crate Key"
+    value: "totem box %player_name% tier4 8"
+    reward-value: "x8 Totem Box Légendaire"
 level.91:
   required-xp: 100008100
   free-reward:
-    type: tokens
-    value: 22750
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 20"
+    reward-value: "x20 Conteneur de Robot Tier 4"
   premium-reward:
-    type: tokens
-    value: 113750
+    type: command
+    value: "pets givepetbox %player_name% PetBoxT4 48"
+    reward-value: "x48 Conteneur de Robot Tier 4"
 level.92:
   required-xp: 100008200
   free-reward:
-    type: tokens
-    value: 23050
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket de Trait"
   premium-reward:
-    type: tokens
-    value: 115250
+    type: command
+    value: "ex give pets_traits to:<player[%player_name%].inventory> quantity:35"
+    reward-value: "x35 Ticket de Trait"
 level.93:
   required-xp: 100008300
   free-reward:
-    type: money
-    value: 235000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket de Stat"
   premium-reward:
-    type: money
-    value: 1175000
+    type: command
+    value: "ex give pets_stats to:<player[%player_name%].inventory> quantity:35"
+    reward-value: "x35 Ticket de Stat"
 level.94:
   required-xp: 100008400
   free-reward:
-    type: tokens
-    value: 23500
+    type: command
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:20"
+    reward-value: "x20 Ticket Stat Unique"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "ex give pets_stats_unique to:<player[%player_name%].inventory> quantity:35"
+    reward-value: "x35 Ticket Stat Unique"
 level.95:
   required-xp: 100008500
   free-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "p give %player_name% 1000"
+    reward-value: "x1000 LostCoins"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 2"
-    reward-value: "2x Legendary Crate Key"
+    value: "p give %player_name% 5000"
+    reward-value: "x5000 LostCoins"
 level.96:
   required-xp: 100008600
   free-reward:
-    type: tokens
-    value: 24000
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 8"
+    reward-value: "x8 Clé de Caisse Solaire"
   premium-reward:
-    type: tokens
-    value: 120000
+    type: command
+    value: "acrates key give caisse-solaire %player_name% 15"
+    reward-value: "x15 Clé de Caisse Solaire"
 level.97:
   required-xp: 100008700
   free-reward:
-    type: tokens
-    value: 24300
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 20"
+    reward-value: "x20 Crystal Box Tier 4"
   premium-reward:
-    type: tokens
-    value: 121500
+    type: command
+    value: "omnitool crystalbox %player_name% pickaxe_tier4 35"
+    reward-value: "x35 Crystal Box Tier 4"
 level.98:
   required-xp: 100008800
   free-reward:
-    type: money
-    value: 247500
+    type: command
+    value: "lootbox give %player_name% startV1 2"
+    reward-value: "x2 Lootbox Lancement V1"
   premium-reward:
-    type: money
-    value: 1237500
+    type: command
+    value: "lootbox give %player_name% startV1 3"
+    reward-value: "x3 Lootbox Lancement V1"
 level.99:
   required-xp: 100008900
   free-reward:
-    type: tokens
-    value: 24750
+    type: command
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:5"
+    reward-value: "x5 Super Booster Box"
   premium-reward:
     type: command
-    value: "pickaxe enchant %player% unbreaking 1"
-    reward-value: "1x Pickaxe Unbreaking Level"
+    value: "ex give superboosterbox to:<player[%player_name%].inventory> quantity:8"
+    reward-value: "x8 Super Booster Box"
 level.100:
   required-xp: 100009000
   free-reward:
     type: command
-    value: "crate give %player% legendary 1"
-    reward-value: "1x Legendary Crate Key"
+    value: "totem box %player_name% tier4 5"
+    reward-value: "x5 Totem Box Légendaire"
   premium-reward:
     type: command
-    value: "crate give %player% legendary 2"
-    reward-value: "2x Legendary Crate Key"
+    value: "totem box %player_name% tier4 8"
+    reward-value: "x8 Totem Box Légendaire"
