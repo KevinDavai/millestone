@@ -1,1247 +1,863 @@
-# ================================================
-# BATTLEPASS - Configuration des niveaux
-# ================================================
-# Ce fichier configure le système de battlepass
-# avec des récompenses progressives basées sur 
-# les récompenses des milestones
-# ================================================
-
-battlepass:
-  # Configuration générale
-  settings:
-    max_level: 100
-    xp_per_level_base: 1000
-    xp_multiplier: 1.1  # Chaque niveau nécessite 10% d'XP en plus
-    season_duration_days: 60
-    
-  # Son joué lors de la montée de niveau
-  level_up_sound: "custom_sounds:sounds.levelup"
-  
-  # Récompenses gratuites (Free Pass)
-  free_rewards:
-
-    level_1:
-      level: 1
-      xp_required: 1000
-      rewards:
-        - reward_1:
-            display_name: 'x1 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_2:
-      level: 2
-      xp_required: 1100
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_3:
-      level: 3
-      xp_required: 1210
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_4:
-      level: 4
-      xp_required: 1331
-      rewards:
-        - reward_1:
-            display_name: 'x1 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_5:
-      level: 5
-      xp_required: 1464
-      rewards:
-        - reward_1:
-            display_name: 'x50 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 50'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_6:
-      level: 6
-      xp_required: 1610
-      rewards:
-        - reward_1:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_7:
-      level: 7
-      xp_required: 1771
-      rewards:
-        - reward_1:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_8:
-      level: 8
-      xp_required: 1948
-      rewards:
-        - reward_1:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_9:
-      level: 9
-      xp_required: 2143
-      rewards:
-        - reward_1:
-            display_name: 'x1 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_10:
-      level: 10
-      xp_required: 2357
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_11:
-      level: 11
-      xp_required: 2593
-      rewards:
-        - reward_1:
-            display_name: 'x1 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_12:
-      level: 12
-      xp_required: 2853
-      rewards:
-        - reward_1:
-            display_name: 'x1 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_13:
-      level: 13
-      xp_required: 3138
-      rewards:
-        - reward_1:
-            display_name: 'x3 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_14:
-      level: 14
-      xp_required: 3452
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_15:
-      level: 15
-      xp_required: 3797
-      rewards:
-        - reward_1:
-            display_name: 'x3 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_16:
-      level: 16
-      xp_required: 4177
-      rewards:
-        - reward_1:
-            display_name: 'x30 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_17:
-      level: 17
-      xp_required: 4594
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_18:
-      level: 18
-      xp_required: 5054
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_19:
-      level: 19
-      xp_required: 5559
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_20:
-      level: 20
-      xp_required: 6115
-      rewards:
-        - reward_1:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx3 &8- &f15m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 300 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_21:
-      level: 21
-      xp_required: 6727
-      rewards:
-        - reward_1:
-            display_name: 'x50 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 50'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_22:
-      level: 22
-      xp_required: 7400
-      rewards:
-        - reward_1:
-            display_name: 'x2 &b&lTotem Box <glyph:rare_rank>'
-            commands:
-              - '[console] execute as %player_name% run totem give totem_rare 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_23:
-      level: 23
-      xp_required: 8140
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_24:
-      level: 24
-      xp_required: 8954
-      rewards:
-        - reward_1:
-            display_name: 'x2 &b&lTotem Box <glyph:rare_rank>'
-            commands:
-              - '[console] execute as %player_name% run totem give totem_rare 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_25:
-      level: 25
-      xp_required: 9849
-      rewards:
-        - reward_1:
-            display_name: 'x50 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 50'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x2 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_3:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_26:
-      level: 26
-      xp_required: 10834
-      rewards:
-        - reward_1:
-            display_name: 'x2 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_27:
-      level: 27
-      xp_required: 11918
-      rewards:
-        - reward_1:
-            display_name: 'x5 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_28:
-      level: 28
-      xp_required: 13109
-      rewards:
-        - reward_1:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_29:
-      level: 29
-      xp_required: 14420
-      rewards:
-        - reward_1:
-            display_name: 'x100 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 100'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_30:
-      level: 30
-      xp_required: 15863
-      rewards:
-        - reward_1:
-            display_name: 'x3 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_stats quantity:3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x3 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_31:
-      level: 31
-      xp_required: 17449
-      rewards:
-        - reward_1:
-            display_name: 'x5 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_32:
-      level: 32
-      xp_required: 19194
-      rewards:
-        - reward_1:
-            display_name: 'x100 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 100'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_33:
-      level: 33
-      xp_required: 21113
-      rewards:
-        - reward_1:
-            display_name: 'x50 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 50'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_34:
-      level: 34
-      xp_required: 23225
-      rewards:
-        - reward_1:
-            display_name: 'x3 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_35:
-      level: 35
-      xp_required: 25547
-      rewards:
-        - reward_1:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x100 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 100'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_36:
-      level: 36
-      xp_required: 28102
-      rewards:
-        - reward_1:
-            display_name: 'x3 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_stats quantity:3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_37:
-      level: 37
-      xp_required: 30912
-      rewards:
-        - reward_1:
-            display_name: 'x1 &d&lBooster &5&lLevel &7(&fx5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Level 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_38:
-      level: 38
-      xp_required: 34003
-      rewards:
-        - reward_1:
-            display_name: 'x3 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_39:
-      level: 39
-      xp_required: 37404
-      rewards:
-        - reward_1:
-            display_name: 'x3 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_40:
-      level: 40
-      xp_required: 41144
-      rewards:
-        - reward_1:
-            display_name: 'x5 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x1 &b&lBooster &3&lGemmes &7(&fx5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Gemmes 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_41:
-      level: 41
-      xp_required: 45259
-      rewards:
-        - reward_1:
-            display_name: 'x5 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
-            commands:
-              - '[console] caisse give %player_name% caisse-terre 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_42:
-      level: 42
-      xp_required: 49785
-      rewards:
-        - reward_1:
-            display_name: 'x10 &d&lCapsule d"Infuseurs <glyph:epique_rank>'
-            commands:
-              - '[console] execute as %player_name% run infusers give 10'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_43:
-      level: 43
-      xp_required: 54763
-      rewards:
-        - reward_1:
-            display_name: 'x150 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_44:
-      level: 44
-      xp_required: 60240
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
-            commands:
-              - '[console] execute as %player_name% run pets_stats_unique quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_45:
-      level: 45
-      xp_required: 66264
-      rewards:
-        - reward_1:
-            display_name: 'x150 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x3 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_46:
-      level: 46
-      xp_required: 72890
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_47:
-      level: 47
-      xp_required: 80179
-      rewards:
-        - reward_1:
-            display_name: 'x3 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_48:
-      level: 48
-      xp_required: 88197
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_stats quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_49:
-      level: 49
-      xp_required: 97017
-      rewards:
-        - reward_1:
-            display_name: 'x3 &e&lBooster Box'
-            commands:
-              - '[console] boosterbox give %player_name% 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_50:
-      level: 50
-      xp_required: 106718
-      rewards:
-        - reward_1:
-            display_name: 'x8 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 8'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x150 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_3:
-            display_name: 'x1 &2&lBooster &a&lMonnaie &7(&f×5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Money 500 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_51:
-      level: 51
-      xp_required: 117390
-      rewards:
-        - reward_1:
-            display_name: 'x8 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 8'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_52:
-      level: 52
-      xp_required: 129129
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_53:
-      level: 53
-      xp_required: 142042
-      rewards:
-        - reward_1:
-            display_name: 'x150 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_54:
-      level: 54
-      xp_required: 156247
-      rewards:
-        - reward_1:
-            display_name: 'x8 &b&lConteneur de Robot &f<glyph:rare_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT2 8'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_55:
-      level: 55
-      xp_required: 171871
-      rewards:
-        - reward_1:
-            display_name: 'x150 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x5 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
-            commands:
-              - '[console] caisse give %player_name% caisse-terre 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_56:
-      level: 56
-      xp_required: 189059
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCC00&lk&#FFD100&le&#FFD500&lt&#FFD900&l &#FFDE00&ld&#FFE200&le&#FFE700&l &#FFEB00&lT&#FFF000&lr&#FFF400&la&#FFF900&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_57:
-      level: 57
-      xp_required: 207965
-      rewards:
-        - reward_1:
-            display_name: 'x5 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
-            commands:
-              - '[console] caisse give %player_name% caisse-terre 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_58:
-      level: 58
-      xp_required: 228761
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_stats quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_59:
-      level: 59
-      xp_required: 251637
-      rewards:
-        - reward_1:
-            display_name: 'x100 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 100'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_60:
-      level: 60
-      xp_required: 276801
-      rewards:
-        - reward_1:
-            display_name: 'x5 &#FF7D00&lT&#FF7300&li&#FF6A00&lc&#FF6000&lk&#FF5700&le&#FF4D00&lt&#FF4400&l &#FF3A00&ld&#FF3000&le&#FF2700&l &#FF1D00&lS&#FF1400&lt&#FF0A00&la&#FF0000&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_stats quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x5 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
-            commands:
-              - '[console] execute as %player_name% run pets_stats_unique quantity:5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_61:
-      level: 61
-      xp_required: 304481
-      rewards:
-        - reward_1:
-            display_name: 'x150 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_62:
-      level: 62
-      xp_required: 334929
-      rewards:
-        - reward_1:
-            display_name: 'x2 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_63:
-      level: 63
-      xp_required: 368422
-      rewards:
-        - reward_1:
-            display_name: 'x12 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 12'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_64:
-      level: 64
-      xp_required: 405265
-      rewards:
-        - reward_1:
-            display_name: 'x2 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_65:
-      level: 65
-      xp_required: 445791
-      rewards:
-        - reward_1:
-            display_name: 'x2 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_66:
-      level: 66
-      xp_required: 490370
-      rewards:
-        - reward_1:
-            display_name: 'x1 &#bb57fb&lBooster &#da91ff&lProc &7(&f×1.5 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Proc 150 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_67:
-      level: 67
-      xp_required: 539407
-      rewards:
-        - reward_1:
-            display_name: 'x15 &d&lCapsule d"Infuseurs <glyph:epique_rank>'
-            commands:
-              - '[console] execute as %player_name% run infusers give 15'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_68:
-      level: 68
-      xp_required: 593348
-      rewards:
-        - reward_1:
-            display_name: 'x2 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_69:
-      level: 69
-      xp_required: 652683
-      rewards:
-        - reward_1:
-            display_name: 'x250 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 250'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_70:
-      level: 70
-      xp_required: 717951
-      rewards:
-        - reward_1:
-            display_name: 'x1 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
-            commands:
-              - '[console] caisse give %player_name% caisse-solaire 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x150 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_71:
-      level: 71
-      xp_required: 789746
-      rewards:
-        - reward_1:
-            display_name: 'x250 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 250'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_72:
-      level: 72
-      xp_required: 868721
-      rewards:
-        - reward_1:
-            display_name: 'x12 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
-            commands:
-              - '[console] caisse give %player_name% caisse-terre 12'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_73:
-      level: 73
-      xp_required: 955593
-      rewards:
-        - reward_1:
-            display_name: 'x12 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
-            commands:
-              - '[console] execute as %player_name% run pets_stats_unique quantity:12'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_74:
-      level: 74
-      xp_required: 1051153
-      rewards:
-        - reward_1:
-            display_name: 'x12 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 12'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_75:
-      level: 75
-      xp_required: 1156268
-      rewards:
-        - reward_1:
-            display_name: 'x2 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x1 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
-            commands:
-              - '[console] caisse give %player_name% caisse-solaire 1'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_76:
-      level: 76
-      xp_required: 1271895
-      rewards:
-        - reward_1:
-            display_name: 'x150 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_77:
-      level: 77
-      xp_required: 1399084
-      rewards:
-        - reward_1:
-            display_name: 'x2 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 2'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_78:
-      level: 78
-      xp_required: 1538993
-      rewards:
-        - reward_1:
-            display_name: 'x8 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:8'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_79:
-      level: 79
-      xp_required: 1692892
-      rewards:
-        - reward_1:
-            display_name: 'x1 &2&lBooster &a&lMonnaie &7(&f×7 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Money 700 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_80:
-      level: 80
-      xp_required: 1862182
-      rewards:
-        - reward_1:
-            display_name: 'x150 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 150'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x1 &2&lBooster &a&lMonnaie &7(&f×7 &8- &f30m&7)'
-            commands:
-              - '[console] execute as %player_name% run potions:give Money 700 30'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_81:
-      level: 81
-      xp_required: 2048400
-      rewards:
-        - reward_1:
-            display_name: 'x18 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
-            commands:
-              - '[console] execute as %player_name% run pets_stats_unique quantity:18'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_82:
-      level: 82
-      xp_required: 2253240
-      rewards:
-        - reward_1:
-            display_name: 'x24 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
-            commands:
-              - '[console] caisse give %player_name% caisse-terre 24'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_83:
-      level: 83
-      xp_required: 2478564
-      rewards:
-        - reward_1:
-            display_name: 'x18 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:18'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_84:
-      level: 84
-      xp_required: 2726420
-      rewards:
-        - reward_1:
-            display_name: 'x500 &5&lLostCoins'
-            commands:
-              - '[console] p give %player_name% 500'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_85:
-      level: 85
-      xp_required: 2999062
-      rewards:
-        - reward_1:
-            display_name: 'x24 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 24'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_86:
-      level: 86
-      xp_required: 3298969
-      rewards:
-        - reward_1:
-            display_name: 'x16 &#00FFFF&l&oB&#08F7FF&l&oo&#0FEEFF&l&oî&#17E6FF&l&ot&#1FDDFF&l&oe&#27D5FF&l&os &#36C4FF&l&oà &#45B3FF&l&oc&#4DAAFF&l&or&#55A2FF&l&oi&#5C99FF&l&os&#6491FF&l&ot&#6C88FF&l&oa&#7480FF&l&ou&#7B77FF&l&ox &#8B66FF&l&op&#925EFF&l&oi&#9A55FF&l&oo&#A24DFF&l&oc&#A944FF&l&oh&#B13CFF&l&oe &#C12BFF&l&oT&#C822FF&l&oi&#D01AFF&l&oe&#D811FF&l&or &#E700FF&l&o4'
-            commands:
-              - '[console] execute as %player_name% run special_tier4_boxes give 16'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_87:
-      level: 87
-      xp_required: 3628865
-      rewards:
-        - reward_1:
-            display_name: 'x48 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 48'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_88:
-      level: 88
-      xp_required: 3991752
-      rewards:
-        - reward_1:
-            display_name: 'x18 &#DF49FF&lT&#DB45FF&li&#D742FF&lc&#D23EFF&lk&#CE3AFF&le&#CA37FF&lt&#C633FF&ls &#BD2CFF&lS&#B928FF&lt&#B525FF&la&#B021FF&lt&#AC1DFF&ls &#A416FF&lU&#9F12FF&ln&#9B0FFF&li&#970BFF&lq&#9307FF&lu&#8E04FF&le&#8A00FF&ls'
-            commands:
-              - '[console] execute as %player_name% run pets_stats_unique quantity:18'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_89:
-      level: 89
-      xp_required: 4390927
-      rewards:
-        - reward_1:
-            display_name: 'x24 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 24'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_90:
-      level: 90
-      xp_required: 4830020
-      rewards:
-        - reward_1:
-            display_name: 'x5 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x3 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
-            commands:
-              - '[console] caisse give %player_name% caisse-solaire 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_91:
-      level: 91
-      xp_required: 5313022
-      rewards:
-        - reward_1:
-            display_name: 'x24 &a&lClé de &#007EC9&lC&#0888CE&la&#0F93D3&li&#179DD8&ls&#1FA7DD&ls&#26B1E2&le&#2EBCE6&l &#35C6EB&lT&#3DD0F0&le&#45DBF5&lr&#4CE5FA&lr&#54EFFF&le &8(&7virtuelle&8)'
-            commands:
-              - '[console] caisse give %player_name% caisse-terre 24'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_92:
-      level: 92
-      xp_required: 5844324
-      rewards:
-        - reward_1:
-            display_name: 'x5 &c&lSuper &6&lBooster Box'
-            commands:
-              - '[console] superboosterbox give %player_name% 5'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_93:
-      level: 93
-      xp_required: 6428757
-      rewards:
-        - reward_1:
-            display_name: 'x3 &a&lClé de &#FFC900&lC&#FFCC00&la&#FFD000&li&#FFD300&ls&#FFD700&ls&#FFDA00&le&#FFDE00&l &#FFE100&lS&#FFE500&lo&#FFE800&ll&#FFEC00&la&#FFF000&li&#FFF300&lr&#FFF600&le &8[&7Event&8]'
-            commands:
-              - '[console] caisse give %player_name% caisse-solaire 3'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_94:
-      level: 94
-      xp_required: 7071633
-      rewards:
-        - reward_1:
-            display_name: 'x250 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 250'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_95:
-      level: 95
-      xp_required: 7778796
-      rewards:
-        - reward_1:
-            display_name: 'x18 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:18'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_96:
-      level: 96
-      xp_required: 8556676
-      rewards:
-        - reward_1:
-            display_name: 'x250 &a&lGens Slots'
-            commands:
-              - '[console] execute as %player_name% run gens_slot give 250'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_97:
-      level: 97
-      xp_required: 9412343
-      rewards:
-        - reward_1:
-            display_name: 'x24 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 24'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_98:
-      level: 98
-      xp_required: 10353578
-      rewards:
-        - reward_1:
-            display_name: 'x48 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 48'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_99:
-      level: 99
-      xp_required: 11388935
-      rewards:
-        - reward_1:
-            display_name: 'x25 &d&lCapsule d"Infuseurs <glyph:epique_rank>'
-            commands:
-              - '[console] execute as %player_name% run infusers give 25'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-    level_100:
-      level: 100
-      xp_required: 12527829
-      rewards:
-        - reward_1:
-            display_name: 'x25 &d&lCapsule d"Infuseurs <glyph:epique_rank>'
-            commands:
-              - '[console] execute as %player_name% run infusers give 25'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_2:
-            display_name: 'x18 &#FFBF00&lT&#FFC400&li&#FFC800&lc&#FFCD00&lk&#FFD100&le&#FFD600&lt&#FFDA00&l &#FFDF00&ld&#FFE400&le&#FFE800&l &#FFED00&lT&#FFF100&lr&#FFF600&la&#FFFA00&li&#FFFF00&lt'
-            commands:
-              - '[console] execute as %player_name% run pets_traits quantity:18'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-        - reward_3:
-            display_name: 'x48 &e&lConteneur de Robot &f<glyph:legendaire_rank>'
-            commands:
-              - '[console] pets givepetbox %player_name% PetBoxT3 48'
-              - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-  # Récompenses premium (Premium Pass)
-  premium_rewards:
-    # Les joueurs premium reçoivent des récompenses supplémentaires
-    multiplier: 1.5  # 50% de récompenses en plus
-    bonus_levels:
-
-      level_10:
-        level: 10
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_20:
-        level: 20
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_30:
-        level: 30
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_40:
-        level: 40
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_50:
-        level: 50
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_60:
-        level: 60
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_70:
-        level: 70
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_80:
-        level: 80
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_90:
-        level: 90
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-      level_100:
-        level: 100
-        rewards:
-          - bonus_reward:
-              display_name: '&6&l★ &e&lBonus Premium &6&l★'
-              commands:
-                - '[console] p give %player_name% 500'
-                - '[console] execute as %player_name% run gens_slot give 100'
-                - '[sound] ENTITY_PLAYER_LEVELUP 1.0 0.5'
-
-# ================================================
-# Configuration des quêtes journalières
-# ================================================
-daily_quests:
-  # Quêtes pour gagner de l'XP battlepass
-  quest_types:
-    - mine_blocks:
-        name: "&e&lMiner des blocs"
-        description: "&7Minez {amount} blocs pour gagner {xp} XP"
-        amounts: [100, 250, 500, 1000]
-        xp_rewards: [100, 250, 500, 1000]
-        
-    - catch_fish:
-        name: "&b&lPêcher des poissons"
-        description: "&7Pêchez {amount} poissons pour gagner {xp} XP"
-        amounts: [50, 100, 200, 400]
-        xp_rewards: [100, 250, 500, 1000]
-        
-    - kill_mobs:
-        name: "&c&lTuer des monstres"
-        description: "&7Tuez {amount} monstres pour gagner {xp} XP"
-        amounts: [25, 50, 100, 200]
-        xp_rewards: [100, 250, 500, 1000]
-        
-    - play_time:
-        name: "&a&lTemps de jeu"
-        description: "&7Jouez pendant {amount} minutes pour gagner {xp} XP"
-        amounts: [30, 60, 120, 180]
-        xp_rewards: [100, 250, 500, 1000]
-
-# ================================================
-# Messages du système
-# ================================================
-messages:
-  level_up: "&a&l✓ &7Vous êtes passé au niveau &a{level}&7 du Battle Pass!"
-  reward_claimed: "&a&l✓ &7Récompense réclamée: &f{reward}"
-  max_level_reached: "&6&l★ &e&lFélicitations! Vous avez atteint le niveau maximum du Battle Pass!"
-  premium_required: "&c&lErreur &8» &7Cette récompense nécessite le Pass Premium."
-  quest_completed: "&a&l✓ &7Quête complétée: &f{quest_name} &8(+{xp} XP)"
+# Battlepass Levels Configuration
+# Reward types: tokens, money, command
+
+level.1:
+  required-xp: 99999100
+  free-reward:
+    type: tokens
+    value: 50
+  premium-reward:
+    type: tokens
+    value: 250
+level.2:
+  required-xp: 99999200
+  free-reward:
+    type: tokens
+    value: 150
+  premium-reward:
+    type: tokens
+    value: 750
+level.3:
+  required-xp: 99999300
+  free-reward:
+    type: money
+    value: 2000
+  premium-reward:
+    type: money
+    value: 10000
+level.4:
+  required-xp: 99999400
+  free-reward:
+    type: tokens
+    value: 200
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% fortune 1"
+    reward-value: "1x Pickaxe Fortune Level"
+level.5:
+  required-xp: 99999500
+  free-reward:
+    type: command
+    value: "crate give %player% common 1"
+    reward-value: "1x Common Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+level.6:
+  required-xp: 99999600
+  free-reward:
+    type: tokens
+    value: 300
+  premium-reward:
+    type: tokens
+    value: 1500
+level.7:
+  required-xp: 99999700
+  free-reward:
+    type: tokens
+    value: 400
+  premium-reward:
+    type: tokens
+    value: 2000
+level.8:
+  required-xp: 99999800
+  free-reward:
+    type: money
+    value: 4500
+  premium-reward:
+    type: money
+    value: 22500
+level.9:
+  required-xp: 99999900
+  free-reward:
+    type: tokens
+    value: 450
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% fortune 1"
+    reward-value: "1x Pickaxe Fortune Level"
+level.10:
+  required-xp: 100000000
+  free-reward:
+    type: command
+    value: "crate give %player% common 1"
+    reward-value: "1x Common Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+level.11:
+  required-xp: 100000100
+  free-reward:
+    type: tokens
+    value: 550
+  premium-reward:
+    type: tokens
+    value: 2750
+level.12:
+  required-xp: 100000200
+  free-reward:
+    type: tokens
+    value: 650
+  premium-reward:
+    type: tokens
+    value: 3250
+level.13:
+  required-xp: 100000300
+  free-reward:
+    type: money
+    value: 7000
+  premium-reward:
+    type: money
+    value: 35000
+level.14:
+  required-xp: 100000400
+  free-reward:
+    type: tokens
+    value: 700
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% fortune 1"
+    reward-value: "1x Pickaxe Fortune Level"
+level.15:
+  required-xp: 100000500
+  free-reward:
+    type: command
+    value: "crate give %player% common 1"
+    reward-value: "1x Common Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+level.16:
+  required-xp: 100000600
+  free-reward:
+    type: tokens
+    value: 800
+  premium-reward:
+    type: tokens
+    value: 4000
+level.17:
+  required-xp: 100000700
+  free-reward:
+    type: tokens
+    value: 900
+  premium-reward:
+    type: tokens
+    value: 4500
+level.18:
+  required-xp: 100000800
+  free-reward:
+    type: money
+    value: 9500
+  premium-reward:
+    type: money
+    value: 47500
+level.19:
+  required-xp: 100000900
+  free-reward:
+    type: tokens
+    value: 950
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% fortune 1"
+    reward-value: "1x Pickaxe Fortune Level"
+level.20:
+  required-xp: 100001000
+  free-reward:
+    type: command
+    value: "crate give %player% common 1"
+    reward-value: "1x Common Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+level.21:
+  required-xp: 100001100
+  free-reward:
+    type: tokens
+    value: 1575
+  premium-reward:
+    type: tokens
+    value: 7875
+level.22:
+  required-xp: 100001200
+  free-reward:
+    type: tokens
+    value: 1700
+  premium-reward:
+    type: tokens
+    value: 8500
+level.23:
+  required-xp: 100001300
+  free-reward:
+    type: money
+    value: 18000
+  premium-reward:
+    type: money
+    value: 90000
+level.24:
+  required-xp: 100001400
+  free-reward:
+    type: tokens
+    value: 1800
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% fortune 1"
+    reward-value: "1x Pickaxe Fortune Level"
+level.25:
+  required-xp: 100001500
+  free-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+level.26:
+  required-xp: 100001600
+  free-reward:
+    type: tokens
+    value: 1950
+  premium-reward:
+    type: tokens
+    value: 9750
+level.27:
+  required-xp: 100001700
+  free-reward:
+    type: tokens
+    value: 2075
+  premium-reward:
+    type: tokens
+    value: 10375
+level.28:
+  required-xp: 100001800
+  free-reward:
+    type: money
+    value: 21750
+  premium-reward:
+    type: money
+    value: 108750
+level.29:
+  required-xp: 100001900
+  free-reward:
+    type: tokens
+    value: 2175
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% fortune 1"
+    reward-value: "1x Pickaxe Fortune Level"
+level.30:
+  required-xp: 100002000
+  free-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+level.31:
+  required-xp: 100002100
+  free-reward:
+    type: tokens
+    value: 2325
+  premium-reward:
+    type: tokens
+    value: 11625
+level.32:
+  required-xp: 100002200
+  free-reward:
+    type: tokens
+    value: 2450
+  premium-reward:
+    type: tokens
+    value: 12250
+level.33:
+  required-xp: 100002300
+  free-reward:
+    type: money
+    value: 25500
+  premium-reward:
+    type: money
+    value: 127500
+level.34:
+  required-xp: 100002400
+  free-reward:
+    type: money
+    value: 26250
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% efficiency 1"
+    reward-value: "1x Pickaxe Efficiency Level"
+level.35:
+  required-xp: 100002500
+  free-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+level.36:
+  required-xp: 100002600
+  free-reward:
+    type: tokens
+    value: 2700
+  premium-reward:
+    type: tokens
+    value: 13500
+level.37:
+  required-xp: 100002700
+  free-reward:
+    type: tokens
+    value: 2825
+  premium-reward:
+    type: tokens
+    value: 14125
+level.38:
+  required-xp: 100002800
+  free-reward:
+    type: money
+    value: 29250
+  premium-reward:
+    type: money
+    value: 146250
+level.39:
+  required-xp: 100002900
+  free-reward:
+    type: money
+    value: 30000
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% efficiency 1"
+    reward-value: "1x Pickaxe Efficiency Level"
+level.40:
+  required-xp: 100003000
+  free-reward:
+    type: command
+    value: "crate give %player% uncommon 1"
+    reward-value: "1x Uncommon Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+level.41:
+  required-xp: 100003100
+  free-reward:
+    type: tokens
+    value: 4100
+  premium-reward:
+    type: tokens
+    value: 20500
+level.42:
+  required-xp: 100003200
+  free-reward:
+    type: tokens
+    value: 4250
+  premium-reward:
+    type: tokens
+    value: 21250
+level.43:
+  required-xp: 100003300
+  free-reward:
+    type: money
+    value: 44000
+  premium-reward:
+    type: money
+    value: 220000
+level.44:
+  required-xp: 100003400
+  free-reward:
+    type: money
+    value: 45000
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% efficiency 1"
+    reward-value: "1x Pickaxe Efficiency Level"
+level.45:
+  required-xp: 100003500
+  free-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+level.46:
+  required-xp: 100003600
+  free-reward:
+    type: tokens
+    value: 4600
+  premium-reward:
+    type: tokens
+    value: 23000
+level.47:
+  required-xp: 100003700
+  free-reward:
+    type: tokens
+    value: 4750
+  premium-reward:
+    type: tokens
+    value: 23750
+level.48:
+  required-xp: 100003800
+  free-reward:
+    type: money
+    value: 49000
+  premium-reward:
+    type: money
+    value: 245000
+level.49:
+  required-xp: 100003900
+  free-reward:
+    type: money
+    value: 50000
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% efficiency 1"
+    reward-value: "1x Pickaxe Efficiency Level"
+level.50:
+  required-xp: 100004000
+  free-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+level.51:
+  required-xp: 100004100
+  free-reward:
+    type: tokens
+    value: 5100
+  premium-reward:
+    type: tokens
+    value: 25500
+level.52:
+  required-xp: 100004200
+  free-reward:
+    type: tokens
+    value: 5250
+  premium-reward:
+    type: tokens
+    value: 26250
+level.53:
+  required-xp: 100004300
+  free-reward:
+    type: money
+    value: 54000
+  premium-reward:
+    type: money
+    value: 270000
+level.54:
+  required-xp: 100004400
+  free-reward:
+    type: money
+    value: 55000
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% efficiency 1"
+    reward-value: "1x Pickaxe Efficiency Level"
+level.55:
+  required-xp: 100004500
+  free-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+level.56:
+  required-xp: 100004600
+  free-reward:
+    type: tokens
+    value: 5600
+  premium-reward:
+    type: tokens
+    value: 28000
+level.57:
+  required-xp: 100004700
+  free-reward:
+    type: tokens
+    value: 5750
+  premium-reward:
+    type: tokens
+    value: 28750
+level.58:
+  required-xp: 100004800
+  free-reward:
+    type: money
+    value: 59000
+  premium-reward:
+    type: money
+    value: 295000
+level.59:
+  required-xp: 100004900
+  free-reward:
+    type: money
+    value: 60000
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% efficiency 1"
+    reward-value: "1x Pickaxe Efficiency Level"
+level.60:
+  required-xp: 100005000
+  free-reward:
+    type: command
+    value: "crate give %player% rare 1"
+    reward-value: "1x Rare Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+level.61:
+  required-xp: 100005100
+  free-reward:
+    type: tokens
+    value: 9150
+  premium-reward:
+    type: tokens
+    value: 45750
+level.62:
+  required-xp: 100005200
+  free-reward:
+    type: tokens
+    value: 9350
+  premium-reward:
+    type: tokens
+    value: 46750
+level.63:
+  required-xp: 100005300
+  free-reward:
+    type: money
+    value: 96000
+  premium-reward:
+    type: money
+    value: 480000
+level.64:
+  required-xp: 100005400
+  free-reward:
+    type: tokens
+    value: 9600
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.65:
+  required-xp: 100005500
+  free-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+level.66:
+  required-xp: 100005600
+  free-reward:
+    type: tokens
+    value: 9900
+  premium-reward:
+    type: tokens
+    value: 49500
+level.67:
+  required-xp: 100005700
+  free-reward:
+    type: tokens
+    value: 10100
+  premium-reward:
+    type: tokens
+    value: 50500
+level.68:
+  required-xp: 100005800
+  free-reward:
+    type: money
+    value: 103500
+  premium-reward:
+    type: money
+    value: 517500
+level.69:
+  required-xp: 100005900
+  free-reward:
+    type: tokens
+    value: 10350
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.70:
+  required-xp: 100006000
+  free-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+level.71:
+  required-xp: 100006100
+  free-reward:
+    type: tokens
+    value: 10650
+  premium-reward:
+    type: tokens
+    value: 53250
+level.72:
+  required-xp: 100006200
+  free-reward:
+    type: tokens
+    value: 10850
+  premium-reward:
+    type: tokens
+    value: 54250
+level.73:
+  required-xp: 100006300
+  free-reward:
+    type: money
+    value: 111000
+  premium-reward:
+    type: money
+    value: 555000
+level.74:
+  required-xp: 100006400
+  free-reward:
+    type: tokens
+    value: 11100
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.75:
+  required-xp: 100006500
+  free-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+level.76:
+  required-xp: 100006600
+  free-reward:
+    type: tokens
+    value: 11400
+  premium-reward:
+    type: tokens
+    value: 57000
+level.77:
+  required-xp: 100006700
+  free-reward:
+    type: tokens
+    value: 11600
+  premium-reward:
+    type: tokens
+    value: 58000
+level.78:
+  required-xp: 100006800
+  free-reward:
+    type: money
+    value: 118500
+  premium-reward:
+    type: money
+    value: 592500
+level.79:
+  required-xp: 100006900
+  free-reward:
+    type: tokens
+    value: 11850
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.80:
+  required-xp: 100007000
+  free-reward:
+    type: command
+    value: "crate give %player% epic 1"
+    reward-value: "1x Epic Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+level.81:
+  required-xp: 100007100
+  free-reward:
+    type: tokens
+    value: 20250
+  premium-reward:
+    type: tokens
+    value: 101250
+level.82:
+  required-xp: 100007200
+  free-reward:
+    type: tokens
+    value: 20550
+  premium-reward:
+    type: tokens
+    value: 102750
+level.83:
+  required-xp: 100007300
+  free-reward:
+    type: money
+    value: 210000
+  premium-reward:
+    type: money
+    value: 1050000
+level.84:
+  required-xp: 100007400
+  free-reward:
+    type: tokens
+    value: 21000
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.85:
+  required-xp: 100007500
+  free-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 2"
+    reward-value: "2x Legendary Crate Key"
+level.86:
+  required-xp: 100007600
+  free-reward:
+    type: tokens
+    value: 21500
+  premium-reward:
+    type: tokens
+    value: 107500
+level.87:
+  required-xp: 100007700
+  free-reward:
+    type: tokens
+    value: 21800
+  premium-reward:
+    type: tokens
+    value: 109000
+level.88:
+  required-xp: 100007800
+  free-reward:
+    type: money
+    value: 222500
+  premium-reward:
+    type: money
+    value: 1112500
+level.89:
+  required-xp: 100007900
+  free-reward:
+    type: tokens
+    value: 22250
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.90:
+  required-xp: 100008000
+  free-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 2"
+    reward-value: "2x Legendary Crate Key"
+level.91:
+  required-xp: 100008100
+  free-reward:
+    type: tokens
+    value: 22750
+  premium-reward:
+    type: tokens
+    value: 113750
+level.92:
+  required-xp: 100008200
+  free-reward:
+    type: tokens
+    value: 23050
+  premium-reward:
+    type: tokens
+    value: 115250
+level.93:
+  required-xp: 100008300
+  free-reward:
+    type: money
+    value: 235000
+  premium-reward:
+    type: money
+    value: 1175000
+level.94:
+  required-xp: 100008400
+  free-reward:
+    type: tokens
+    value: 23500
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.95:
+  required-xp: 100008500
+  free-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 2"
+    reward-value: "2x Legendary Crate Key"
+level.96:
+  required-xp: 100008600
+  free-reward:
+    type: tokens
+    value: 24000
+  premium-reward:
+    type: tokens
+    value: 120000
+level.97:
+  required-xp: 100008700
+  free-reward:
+    type: tokens
+    value: 24300
+  premium-reward:
+    type: tokens
+    value: 121500
+level.98:
+  required-xp: 100008800
+  free-reward:
+    type: money
+    value: 247500
+  premium-reward:
+    type: money
+    value: 1237500
+level.99:
+  required-xp: 100008900
+  free-reward:
+    type: tokens
+    value: 24750
+  premium-reward:
+    type: command
+    value: "pickaxe enchant %player% unbreaking 1"
+    reward-value: "1x Pickaxe Unbreaking Level"
+level.100:
+  required-xp: 100009000
+  free-reward:
+    type: command
+    value: "crate give %player% legendary 1"
+    reward-value: "1x Legendary Crate Key"
+  premium-reward:
+    type: command
+    value: "crate give %player% legendary 2"
+    reward-value: "2x Legendary Crate Key"
